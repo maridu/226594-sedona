@@ -5,17 +5,17 @@
   <title>Гостиницы</title>
 </head>
 <body>
- <header class="main-header">
-      <a class="header-logo" href="index.html"><img src="http://placehold.it/150x100" alt="Логотип сайта Седоны"></a>
-      <nav class="main-nav">
-        <ul class="menu">
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a>Гостиницы</a></li>
-        </ul>
-      </nav>
-    </header>
+  <header class="main-header">
+    <a class="header-logo" href="index.html"><img src="http://placehold.it/150x100" alt="Логотип сайта Седоны"></a>
+    <nav class="main-nav">
+      <ul class="menu">
+        <li><a href="#">Информация</a></li>
+        <li><a href="#">Фото и видео</a></li>
+        <li><a href="#">Карта штата</a></li>
+        <li><a>Гостиницы</a></li>
+      </ul>
+    </nav>
+  </header>
     
     <main class="main-container">
      <h1 class="visually-hidden">Поиск гостиницы в Седоне</h1>
@@ -73,49 +73,50 @@
             <li class="sort-item"><a href="#">По типу</a></li>
             <li class="sort-item"><a href="#">По рейтингу</a></li>
           </ul>
+          <div class="sort-buttons">
+            <button class="sort-ascending">По возрастанию</button>
+            <button class="sort-descending">По убыванию</button>
+          </div>
         </section> <!--        end sort section-->
         
         <section class="found">
-        <h3 class="visually-hidden">По Вашему запросу найдено:</h3>
-         <ul class="found-list">
-           <li class="found-items">
-             <article>
-               <h4>Amara resort &amp; spa</h4>
-               <img src="http://placehold.it/150x100" alt="Amara resort &amp; spa">
-               <p class="hotel-info">
-               <span class="hotel-type">Гостиница</span>
-               <span class="hotel-price">от 4 000 р.</span>
-               </p>
-               <p class="rating">Рейтинг: 8,5</p>
-               <p><a class="button button-more" href="#">Подробнее</a> <a class="button button-book" href="#">Забронировать</a></p>
-             </article>
-           </li>
-           <li class="found-items">
-             <article>
-               <h4>Desert Quail Inn</h4>
-               <img src="http://placehold.it/150x100" alt="Desert Quail Inn">
-               <p class="hotel-info"><span class="hotel-type">Мотель</span><span class="hotel-price">от 3 000 р.</span></p>
-               <p class="rating">Рейтинг: 8,9</p>
-               <p><a class="button button-more" href="#">Подробнее</a> <a class="button button-book" href="#">Забронировать</a></p>
-             </article>
-           </li>
-           <li class="found-items">
-              <article>
-               <h4>Villas at Poco Diablo</h4>
-               <img src="http://placehold.it/150x100" alt="Desert Quail Inn">
-               <p class="hotel-info"><span class="hotel-type">Апартаменты</span><span class="hotel-price">от 2 000 р.</span></p>
-               <p class="rating">Рейтинг: 9,2</p>
-               <p><a class="button button-more" href="#">Подробнее</a> <a class="button button-book" href="#">Забронировать</a></p>
-             </article>
-           </li>
-         </ul>
+          <h3 class="visually-hidden">По Вашему запросу найдено:</h3>
+            <article class="found-item">
+              <h4>Amara resort &amp; spa</h4>
+              <img src="http://placehold.it/150x100" alt="Amara resort &amp; spa">
+              <p class="hotel-info">
+                <span class="hotel-type">Гостиница</span>
+                <span class="hotel-price">от 4 000 р.</span>
+              </p>
+             <p class="rating">Рейтинг: 8,5</p>
+             <p><a class="button button-more" href="#">Подробнее</a> <a class="button button-book" href="#">Забронировать</a></p>
+           </article>
+
+           <article class="found-item">
+             <h4>Desert Quail Inn</h4>
+             <img src="http://placehold.it/150x100" alt="Desert Quail Inn">
+             <p class="hotel-info"><span class="hotel-type">Мотель</span><span class="hotel-price">от 3 000 р.</span></p>
+             <p class="rating">Рейтинг: 8,9</p>
+             <p><a class="button button-more" href="#">Подробнее</a> <a class="button button-book" href="#">Забронировать</a></p>
+           </article>
+
+            <article class="found-item">
+             <h4>Villas at Poco Diablo</h4>
+             <img src="http://placehold.it/150x100" alt="Desert Quail Inn">
+             <p class="hotel-info"><span class="hotel-type">Апартаменты</span><span class="hotel-price">от 2 000 р.</span></p>
+             <p class="rating">Рейтинг: 9,2</p>
+             <p><a class="button button-more" href="#">Подробнее</a> <a class="button button-book" href="#">Забронировать</a></p>
+           </article>
+
         </section> <!--        end found section-->
         
       </section> <!--      end search-results section-->
     </main>
     
     <footer class="main-footer">
-      <p>#visitsedona</p>
+      <div class="hashtag">
+        <p>#visitsedona</p>
+      </div>
       
        <section class="social">
         <h3 class="visually-hidden">Мы в соцсетях</h3>
@@ -126,7 +127,9 @@
         </ul>
       </section><!--      end social section-->
       
-      <p class="copyright">Website by <a href="https://htmlacademy.ru/intensive/htmlcss"><span>HTML Academy</span></a></p>
+      <div class="copyright">
+        <p>Website by <a href="https://htmlacademy.ru/intensive/htmlcss"><span>HTML Academy</span></a></p>
+      </div>
       
     </footer>
   
