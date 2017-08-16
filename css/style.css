@@ -1,0 +1,24 @@
+body {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333333;
+  font-weight: 400;
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+}
+
+.advantages h2 {
+  font-size: 1.5em;
+  line-height: 1.24;
+  color: #000000;
+  font-weight: 700;
+}
+
+.advantage-item h3 {
+  font-size: 1.5em;
+  line-height: 1;
+  color: #000000;
+  font-weight: 700;
+}
+
+
+/* Для заголовков не прописывалось отдельно свойство font-family, т.к. унаследовано от body:  */
