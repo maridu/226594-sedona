@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Гостиницы</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+ <div class="main-wrapper">
   <header class="main-header">
     <a class="header-logo" href="index.html"><img src="img/logo.png" alt="Логотип сайта Седоны" width="138" height="70"></a>
     <nav class="main-nav">
@@ -13,7 +16,7 @@
         <li><a href="#">Информация</a></li>
         <li><a href="#">Фото и видео</a></li>
         <li><a href="#">Карта штата</a></li>
-        <li><a>Гостиницы</a></li>
+        <li><a class="current">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
@@ -21,8 +24,8 @@
     <main class="main-container">
      <h1 class="visually-hidden">Поиск гостиницы в Седоне</h1>
       <section class="filter">
-        <h2 class="visually-hiddden">Фильтры гостиниц</h2>
-        <form class="filter" action="hotels.html" method="get">
+        <h2 class="visually-hidden">Фильтры гостиниц</h2>
+        <form class="form-filter" action="hotels.html" method="get">
           <fieldset>
             <legend>Инфраструктура:</legend>
             <ul>
@@ -58,7 +61,7 @@
             </ul>
           </fieldset>
           <label for="price">Стоимость в сутки:</label>
-          <p><span>от 0</span><span>до 3 000</span></p>
+          <p class="price-range"><span>от 0</span><span>до 3 000</span></p>
           <input class="filter-input filter-input-range" type="range" min="0" max="3000" step="1" name="price" id="price">
           <button class="button button-show" type="submit">Показать</button>
         </form>
@@ -70,7 +73,7 @@
         <section class="sort">
           <h3>Сортировка</h3>
           <ul class="sort-list">
-            <li class="sort-item"><a href="#">По цене</a></li>
+            <li class="sort-item"><a class="sort-current" href="#">По цене</a></li>
             <li class="sort-item"><a href="#">По типу</a></li>
             <li class="sort-item"><a href="#">По рейтингу</a></li>
           </ul>
@@ -84,7 +87,7 @@
           <h3 class="visually-hidden">По Вашему запросу найдено:</h3>
            <div class="found-list">
              <article class="found-item">
-                <h4>Amara resort &amp; spa</h4>
+                <h4><a href="#">Amara resort &amp; spa</a></h4>
                 <img src="img/hotels_photo-1.jpg" alt="Amara resort &amp; spa" width="135" height="90">
                 <p class="hotel-info">
                   <span class="hotel-type">Гостиница</span>
@@ -95,7 +98,7 @@
              </article>
 
              <article class="found-item">
-               <h4>Desert Quail Inn</h4>
+               <h4><a href="#">Desert Quail Inn</a></h4>
                <img src="img/hotels_photo-2.jpg" alt="Desert Quail Inn" width="135" height="90">
                <p class="hotel-info"><span class="hotel-type">Мотель</span><span class="hotel-price">от 3 000 р.</span></p>
                <p class="rating">Рейтинг: 8,9</p>
@@ -103,7 +106,7 @@
              </article>
 
               <article class="found-item">
-               <h4>Villas at Poco Diablo</h4>
+               <h4><a href="#">Villas at Poco Diablo</a></h4>
                <img src="img/hotels_photo-3.jpg" alt="Desert Quail Inn" width="135" height="90">
                <p class="hotel-info"><span class="hotel-type">Апартаменты</span><span class="hotel-price">от 2 000 р.</span></p>
                <p class="rating">Рейтинг: 9,2</p>
@@ -135,6 +138,6 @@
       </div>
       
     </footer>
-  
+  </div>
 </body>
 </html>

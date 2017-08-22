@@ -1,24 +1,410 @@
+/*Общие стили*/
+html, 
 body {
+  margin: 0;
+  padding: 0;
+  
   font-size: 14px;
   line-height: 1.5;
   color: #333333;
   font-weight: 400;
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  
+  background-color: #ededed;
 }
 
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Обертка */
+.main-wrapper {
+  max-width: 1200px;
+  
+  background-color: #ffffff;
+  
+  box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2); 
+}
+/* ширина добавлена сейчас, чтобы сразу можно было увидеть фоны */
+
+/* Хедер */
+ul.menu {
+  list-style: none;
+}
+
+.menu a {
+  line-height: 1.857; /* 26px / 14px */
+  font-weight: 700;
+  color: #000000;
+}
+
+.menu a:hover,
+.menu a:focus {
+  color: #81b3d2;
+  outline: none;
+}
+
+.menu a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+
+/* Блок intro */
+.intro {
+  background-color: #405d6f;
+  background-image: url(../img/mask_intro.png), url(../img/bg_intro.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom center, top center;
+}
+
+/* Блок advantages */
+
 .advantages h2 {
-  font-size: 1.5em;
+  font-size: 1.5em; /* 21px */
   line-height: 1.24;
   color: #000000;
   font-weight: 700;
 }
 
+.reasons {
+  line-height: 1.857;
+  color: #333333;
+}
+
 .advantage-item h3 {
-  font-size: 1.5em;
+  font-size: 1.5em; /* 21px */
   line-height: 1;
   color: #000000;
   font-weight: 700;
 }
-
-
 /* Для заголовков не прописывалось отдельно свойство font-family, т.к. унаследовано от body:  */
+
+.row:nth-child(1),
+.row:nth-child(3) {
+  background-color: #81b3d2;
+  color: #ffffff;
+}
+
+.row:nth-child(1) h3,
+.row:nth-child(3) h3 {
+  color: #ffffff;
+}
+
+.row:nth-child(4) {
+  background-color: #eeeeee;
+}
+
+/* Блок appointment */
+.appointment b {
+  font-size: 2.143rem; /* 30px */
+  line-height: 1.2;
+  font-weight: 700;
+  color: #000000;
+
+}
+
+.appointment-info {
+  line-height: 1.714; /* 24px / 14px */
+}
+
+.appointment .button {
+  color: #ffffff;
+  font-size: 1.5em; /* 21px */
+  line-height: 1.238; /* 26px / 21px */
+  font-weight: 700;
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  
+  background-color: #766357;
+  border: 0;
+}
+
+.appointment .button:hover,
+.appointment .button:focus {
+  background-color: #604e43;
+  outline: none;
+}
+
+.appointment .button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #503e33;
+}
+
+.appointment-form {
+  background-color: #ffffff;
+  
+  box-shadow: 0px 7px 15px 0px rgba(0, 1, 1, 0.15);
+}
+
+.appointment-form input {
+  box-sizing: border-box;
+  
+  line-height: 1.857; /* 26px / 14px */
+  font-weight: 700;
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  color: #000000;
+  text-transform: uppercase;
+  
+  background-color: #f2f2f2;
+  border: 2px solid transparent;
+}
+
+.appointment-form input:hover {
+  background-color: #ebebeb;
+}
+
+.appointment-form input:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: #e5e5e5;
+}
+
+.appointment-form .button-search {
+  background-color: #81b3d2;
+}
+
+.appointment-form .button-search:hover,
+.appointment-form .button-search:focus {
+  background-color: #669ec0;
+  outline: none;
+}
+
+.appointment-form .button-search:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+}
+
+/* Футер */
+.main-footer {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.hashtag p {
+  font-size: 1.5em; /* 21px */
+  line-height: 1.238; /* 26px / 21px */
+  font-weight: 700;
+  color: #000000;
+}
+
+ul.social-list {
+  list-style: none;
+}
+
+.social-list a {
+  background-color: #81b3d2;
+}
+
+.social-list a:hover,
+.social-list a:focus {
+  background-color: #669ec0;
+  outline: none;
+}
+
+.social-list a:active {
+  background-color: #5496bd;
+}
+/*стили для иконок будут добавлены после вставки svg; текст ссылок в дальнейшем будет скрыт, поэтому ему параметры не задаем*/
+
+.copyright p {
+line-height: 1.857; /* 26px / 14px */
+}
+/*стили для ссылки будут заданы после замены текста ссылки на svg*/
+
+/*   *** Страница hotels.html ***   */
+/*Главное меню*/
+a.current,
+a.current:hover,
+a.current:focus,
+a.current:active {
+  color: #766357;
+}
+
+.filter {
+  color: #ffffff;
+  line-height: 1.5; /* 21px / 14px */
+  text-align: left;
+  
+  background-color: #47769f;
+  background-image: url(../img/bg_hotels.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.filter ul {
+  list-style: none;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter legend,
+.filter label[for="price"] {
+  font-weight: 700;
+}
+
+.filter-input:disabled + label {
+  color: #6a6a6a;
+}
+
+.price-range {
+  border: 2px solid #ffffff;
+}
+
+.filter .button {
+  box-sizing: border-box;
+  
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  
+  border: 2px solid #ffffff;
+  background-color: transparent;
+}
+
+.filter .button:hover,
+.filter .button:focus {
+  color: #000000;
+  
+  background-color: #ffffff;
+  outline: none;
+}
+
+/* Блок search-results */
+.results-amount {
+  font-size: 1.5em; /* 21px / 14px */
+  line-height: 1.238; /* 26px / 21 px*/
+  font-weight: 700;
+  text-align: left;
+  color: #000000;
+}
+
+.search-results h3 {
+  font-size: 0.857em; /* 12px / 14px */
+  line-height: 1.5;
+  color: #000000;
+}
+
+ul.sort-list {
+  list-style: none;
+}
+
+.sort-list a {
+  font-size: 0.857em; /* 12px / 14px */
+  line-height: 1.5;
+  
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px dotted #81b3d2;
+}
+
+.sort-list a:hover,
+.sort-list a:focus {
+  color: #81b3d2;
+  outline: none;
+}
+
+.sort-list a:active {
+  color: #000000;
+  border-bottom: transparent;
+}
+
+.sort-list a.sort-current,
+.sort-list a.sort-current:hover,
+.sort-list a.sort-current:focus,
+.sort-list a.sort-current:active {
+  color: #81b3d2;
+  border-bottom: transparent;
+}
+
+/*стили для кнопок прямо-обратной сортировки будут заданы позднее, после замены текста ссылок на svg*/
+
+/* Блок found */
+.found-item {
+  border-bottom: 1px solid #e5e5e5;
+  box-sizing: border-box;
+}
+
+.found-item:first-child {
+  border-top: 1px solid #e5e5e5;
+}
+
+.found-item a {
+  font-size: 1.5em; /* 21px / 14px */
+  line-height: 1.238; /* 26px / 21px */
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.found-item a:hover,
+.found-item a:focus {
+  color: #81b3d2;
+  outline: none;
+}
+
+.found-item a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.found-item .button {
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.found-item .button:hover,
+.found-item .button:focus {
+  color: #ffffff;
+  outline: none;
+}
+
+.found-item .button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.found-item .button-more {
+  background-color: #81b3d2;
+}
+
+.found-item .button-more:hover,
+.found-item .button-more:focus {
+  background-color: #669ec0;
+}
+
+.found-item .button-more:active {
+  background-color: #5496bd;
+}
+
+.found-item .button-book {
+  background-color: #766357;
+}
+
+.found-item .button-book:hover,
+.found-item .button-book:focus {
+  background-color: #604e43;
+}
+
+.found-item .button-book:active {
+  background-color: #503e33;
+}
