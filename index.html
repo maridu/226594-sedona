@@ -29,8 +29,10 @@
       </section> <!--      end intro section-->
       
       <section class="advantages">
-        <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
-        <p class="reasons">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        <div class="advantages-wrapper">
+          <h2>Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</h2>
+          <p class="reasons">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        </div>
         
         <div class="advantages-list">
           <div class="row">
@@ -40,11 +42,11 @@
               <p class="description">Седона - не аттракцион для туристов. Там течет своя жизнь</p>
             </section>
             <div class="advantages-photo">
-              <img src="img/photo-1.jpg" alt="Улицы Седоны">
+              <img src="img/photo-1.jpg" alt="Улицы Седоны" width="800" height="401">
             </div>
           </div>
           
-          <div class="row">
+          <div class="row more-advantages">
             <section class="advantage-item">
               <h3>Жилье</h3>
                 <p class="description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
@@ -65,8 +67,8 @@
               <p class="advantage-number">&mdash; №2 &mdash;</p>
               <p class="description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
             </section>
-            <div class="advantages-photo">
-              <img src="img/photo-2.jpg" alt="Мост Дьявола">
+            <div class="advantages-photo bridge">
+              <img src="img/photo-2.jpg" alt="Мост Дьявола" width="800" height="400">
             </div>
           </div>
           
@@ -76,7 +78,7 @@
                 <p class="advantage-number">&mdash; №3 &mdash;</p>
                 <p class="description">Все достопримечательности находятся очень близко</p>
             </section>
-            <section class="advantage-item">
+            <section class="advantage-item ">
               <h3>Красивая дорога</h3>
                 <p class="advantage-number">&mdash; №4 &mdash;</p>
                 <p class="description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
@@ -98,7 +100,7 @@
         и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <section class="hotel-search">
          <h3 class="visually-hidden">Форма поиска</h3>
-          <button class="button">Поиск гостиницы в Седоне</button>
+          <button class="button button-show-form">Поиск гостиницы в Седоне</button>
           <form class="appointment-form" action="index.html" method="get">
             <label for="date-in">Дата заезда</label>
             <input type="text" name="date-in" id="date-in" placeholder="24 апреля 2017">
@@ -111,13 +113,16 @@
             <button class="button button-search" type="submit">Найти</button>
           </form>
         </section> <!--        end hotel-search section-->
-        
-        <section class="map">
-          <h3 class="visually-hidden">Как нас найти</h3>
-            <img src="img/map.png" alt="Седона — город, расположенный по обе стороны границы между округами Коконино и Явапай в северной области Долины Верде штата Аризона.">
-        </section> <!--        end map section-->
-
       </section> <!--end appointment section-->
+        
+      <section class="map">
+        <h2 class="visually-hidden">Как нас найти</h2>
+         <div class="map-wrapper">
+          <img src="img/map.png" alt="Седона — город, расположенный по обе стороны границы между округами Коконино и Явапай в северной области Долины Верде штата Аризона." width="1200" height="593">
+        </div>
+      </section> <!--        end map section-->
+
+      
     </main>
 
     <footer class="main-footer">

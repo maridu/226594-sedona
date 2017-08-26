@@ -15,7 +15,6 @@ body {
   background-color: #ededed;
 }
 
-
 a {
   text-decoration: none;
 }
@@ -71,6 +70,7 @@ ul.menu {
   background-image: url(../img/mask_intro.png), url(../img/bg_intro.jpg);
   background-repeat: no-repeat, no-repeat;
   background-position: bottom center, top center;
+  background-size: 100% 57px, cover;
 }
 
 /* Блок advantages */
@@ -109,6 +109,7 @@ ul.menu {
 .row:nth-child(4) {
   background-color: #eeeeee;
 }
+
 
 /* Блок appointment */
 .appointment b {
@@ -247,6 +248,7 @@ a.current:active {
 }
 
 .filter ul {
+  padding: 0;
   list-style: none;
 }
 
@@ -256,6 +258,7 @@ a.current:active {
 
 .filter legend,
 .filter label[for="price"] {
+  font-size: 16px; /*16px / 14px*/
   font-weight: 700;
 }
 
@@ -408,3 +411,417 @@ ul.sort-list {
 .found-item .button-book:active {
   background-color: #503e33;
 }
+
+/*   *** Сеточные стили ***   */
+
+.main-wrapper {
+  max-width: 1200px;
+  min-width: 768px;
+  
+  margin: 0 auto;
+  
+  outline: 2px solid red;
+}
+
+.main-header {
+  margin: 0;
+  padding: 0;
+  
+  position: relative;
+}
+
+.header-logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  
+  margin-left: -69px;
+}
+
+.main-nav {
+  margin: 0;
+  padding: 0;
+  max-width: 1200px;
+  min-width: 768px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  outline: 5px solid green;
+}
+/*по ТЗ внутренние отступы меню 6%; вместо прямого их задания, этот эффект создан за счет распределения флекс-элементов в нем*/
+
+.menu::after {
+  content: "";
+  display: block;
+  width: 20.4%;
+  height: 20px;
+}
+
+.menu li {
+  width: 19.9%;
+  
+  
+  outline: 2px solid blue;
+}
+
+.menu li:nth-child(3),
+.menu li:nth-child(4) {
+  order: 1;
+}
+
+.menu a {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.container {
+  
+}
+
+.intro {
+  width: 100%;
+  min-height: 510px;
+  
+  outline: 2px solid green;
+}
+
+.intro img {
+  margin-top: 76px;
+}
+
+.advantages-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center; 
+
+  box-sizing: border-box;
+  min-height: 216px;
+  padding-left: 29.0%;
+  padding-right: 29.5%;
+  
+  outline: 2px solid green;
+}
+
+.advantages-list {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.advantages .row {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+ 
+  outline: 2px solid blue;
+}
+
+.advantage-item {
+  display: flex:
+  flex-flow: column wrap;
+  justify-content: space-around;
+  
+  box-sizing: border-box;
+  width: 33.333%;
+  min-height: 256px;
+  padding-top: 25px;
+  padding-left: 4.2%;
+  padding-right: 4.0%;
+  
+  outline: 2px solid green;
+
+}
+
+.more-advantages .advantage-item {
+  min-height: 330px;
+}
+
+
+.more-advantages .advantage-item::before {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  
+  width: 76px;
+  height: 76px;
+  background-color: red;
+}
+
+.advantages-photo {
+  position: relative;
+  
+  width: 66.666%;
+  min-height: 256px;
+}
+
+
+.advantages-photo img {
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  
+}
+
+.row .bridge {
+  order: -1;
+}
+
+.appointment {
+  position: relative;
+  
+  box-sizing: border-box;
+  
+  min-height: 290px;
+  padding-top: 35px;
+  
+/*  outline: 2px solid blue;*/
+  
+}
+
+.hotel-search {  
+  display: flex;
+  flex-flow: row wrap;
+  
+  width: 568px;
+}
+
+.hotel-search .button-show-form {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  
+  margin-left: -284px;
+  
+  width: 568px;
+  min-height: 86px;
+  
+}
+
+.hotel-search .appointment-form {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  
+  margin-left: -284px;
+  
+  width: 568px;
+  min-height: 395px;
+}
+
+.map {
+  height: 475px; /*в содержимом нет текста*/
+  
+  outline: 2px solid blue;
+}
+
+.map-wrapper {
+  width: 100%;
+  height: 593px; /*в содержимом нет текста*/
+  overflow: hidden;
+}
+
+
+.main-footer {
+  position: relative;
+  
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding-left: 6%;
+  padding-right: 6%;
+  
+  min-height: 120px;
+  
+  outline: 2px solid blue;
+}
+
+.hashtag {
+  width: 20%;
+}
+
+.social {
+  width: 33.333%;
+}
+
+.copyright {
+  width: 20%;
+}
+
+/*   *** Сеточные стили для hotels *** */
+
+.filter {
+  box-sizing: border-box;
+  min-height: 218px;
+  padding-left: 5.9%;
+  padding-right: 5.9%;
+  padding-top: 25px;
+}
+
+.form-filter {
+  display: flex;
+  flex-flow: row wrap;
+  
+  box-sizing: border-box;
+}
+
+.form-filter fieldset,
+.price-wrapper {
+  min-height: 160px; /*временно для сетки*/
+}
+
+.form-filter fieldset {
+  padding: 0;
+  margin-right: 100px;
+  
+  width: 150px;
+  
+  outline: 2px solid green;
+}
+
+.form-filter fieldset:last-of-type {
+  margin-right: 0;
+}
+
+.price-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  
+  box-sizing: border-box;
+  width: 30.6%;
+  margin-left: auto;
+  
+  outline: 2px solid green;
+}
+
+.price-wrapper .button-show {
+  margin: 0 auto;
+  
+  width: 137px;
+}
+
+.search-results-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  
+  box-sizing: border-box;
+  padding-left: 6%;
+  padding-right: 6%;
+  padding-top: 8px;
+  min-height: 85px;
+}
+
+.sort {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  
+  width: auto;
+}
+
+.results-amount,
+.sort h3,
+.sort-list,
+.sort-buttons {
+  outline: 2px solid blue;
+}
+
+.sort-list {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  
+  padding: 0;
+}
+
+.results-amount {
+  margin-right: 49px;
+}
+
+.sort h3 {
+  margin-right: 40px;
+}
+
+.sort-list li {
+  margin-right: 33px;
+}
+
+.sort-list li:last-child {
+  margin-right: 0;
+}
+
+.sort-buttons {
+  margin-left: auto;
+}
+
+.sort-ascending,
+.sort-descending {
+  display: inline-block;
+  
+  width: 11px;
+  height: 10px;
+  
+  overflow: hidden; /*временно, до замены текста на svg*/
+  color: transparent; /*временно, до замены текста на svg*/
+}
+
+.sort-ascending {
+  background: url(../img/icon-up-dir.svg) no-repeat center center; /*временно, до замены текста на svg*/
+  margin-right: 12px;
+}
+
+.sort-descending {
+  background: url(../img/icon-down-dir.svg) no-repeat center center; /*временно, до замены текста на svg*/
+}
+
+.found-list {
+  display: flex;
+  flex-flow: column wrap;
+  
+  width: 100%;
+  
+  outline: 2px solid green;
+}
+
+.found-item {
+  display: flex;
+  align-items: center;
+  padding-left: 6%;
+  padding-right: 6.1%;
+  
+  box-sizing: border-box;
+  width; 100%;
+  min-height: 151px; /* временно для сетки */
+}
+
+.found-item img,
+.found-info-wrapper,
+.rating {
+  outline: 2px solid blue;
+}
+
+.found-item img {
+  order: -1;
+  margin-right: 30px;
+}
+
+.rating {
+  margin-left: auto;
+  width: 110px;
+}
+
+

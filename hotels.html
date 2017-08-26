@@ -60,57 +60,74 @@
               </li>
             </ul>
           </fieldset>
-          <label for="price">Стоимость в сутки:</label>
-          <p class="price-range"><span>от 0</span><span>до 3 000</span></p>
-          <input class="filter-input filter-input-range" type="range" min="0" max="3000" step="1" name="price" id="price">
-          <button class="button button-show" type="submit">Показать</button>
+          <div class="price-wrapper">
+            <label for="price">Стоимость в сутки:</label>
+            <p class="price-range"><span>от 0</span><span>до 3 000</span></p>
+            <input class="filter-input filter-input-range" type="range" min="0" max="3000" step="1" name="price" id="price">
+            <button class="button button-show" type="submit">Показать</button>
+          </div>
         </form>
       </section> <!--      end filter section-->
       
       <section class="search-results">
-        <h2 class="visually-hidden">Результаты поиска</h2>
-        <p class="results-amount">Найдено: 3</p>
-        <section class="sort">
-          <h3>Сортировка</h3>
-          <ul class="sort-list">
-            <li class="sort-item"><a class="sort-current" href="#">По цене</a></li>
-            <li class="sort-item"><a href="#">По типу</a></li>
-            <li class="sort-item"><a href="#">По рейтингу</a></li>
-          </ul>
+        <div class="search-results-wrapper">
+          <h2 class="visually-hidden">Результаты поиска</h2>
+          <p class="results-amount">Найдено: 3</p>
+          <section class="sort">
+            <h3>Сортировка</h3>
+            <ul class="sort-list">
+              <li class="sort-item"><a class="sort-current" href="#">По цене</a></li>
+              <li class="sort-item"><a href="#">По типу</a></li>
+              <li class="sort-item"><a href="#">По рейтингу</a></li>
+            </ul>
+            
+          </section>
           <div class="sort-buttons">
             <a class="sort-ascending" href="#">По возрастанию</a>
             <a class="sort-descending" href="#">По убыванию</a>
           </div>
-        </section> <!--        end sort section-->
+        </div> <!--        end sort section-->
         
         <section class="found">
           <h3 class="visually-hidden">По Вашему запросу найдено:</h3>
            <div class="found-list">
              <article class="found-item">
-                <h4><a href="#">Amara resort &amp; spa</a></h4>
-                <img src="img/hotels_photo-1.jpg" alt="Amara resort &amp; spa" width="135" height="90">
-                <p class="hotel-info">
-                  <span class="hotel-type">Гостиница</span>
-                  <span class="hotel-price">от 4 000 р.</span>
-                </p>
-               <p class="rating">Рейтинг: 8,5</p>
-               <p><a class="button button-more" href="#">Подробнее</a> <a class="button button-book" href="#">Забронировать</a></p>
+                <div class="found-info-wrapper">
+                  <h4><a href="#">Amara resort &amp; spa</a></h4>
+                  <p class="hotel-info">
+                    <span class="hotel-type">Гостиница</span>
+                    <span class="hotel-price">от 4 000 р.</span>
+                  </p>
+                 <p><a class="button button-more" href="#">Подробнее</a> <a class="button button-book" href="#">Забронировать</a></p>
+               </div>
+               <img src="img/hotels_photo-1.jpg" alt="Amara resort &amp; spa" width="135" height="90">
+               <div class="rating">
+                 <p>Рейтинг: 8,5</p>
+               </div>
              </article>
 
              <article class="found-item">
-               <h4><a href="#">Desert Quail Inn</a></h4>
+               <div class="found-info-wrapper">
+                 <h4><a href="#">Desert Quail Inn</a></h4>
+                 <p class="hotel-info"><span class="hotel-type">Мотель</span><span class="hotel-price">от 3 000 р.</span></p>
+                 <p><a class="button button-more" href="#">Подробнее</a> <a class="button button-book" href="#">Забронировать</a></p>
+              </div>
                <img src="img/hotels_photo-2.jpg" alt="Desert Quail Inn" width="135" height="90">
-               <p class="hotel-info"><span class="hotel-type">Мотель</span><span class="hotel-price">от 3 000 р.</span></p>
-               <p class="rating">Рейтинг: 8,9</p>
-               <p><a class="button button-more" href="#">Подробнее</a> <a class="button button-book" href="#">Забронировать</a></p>
+               <div class="rating">
+                 <p>Рейтинг: 8,9</p>
+               </div>
              </article>
 
               <article class="found-item">
-               <h4><a href="#">Villas at Poco Diablo</a></h4>
+                <div class="found-info-wrapper">
+                  <h4><a href="#">Villas at Poco Diablo</a></h4>
+                  <p class="hotel-info"><span class="hotel-type">Апартаменты</span><span class="hotel-price">от 2 000 р.</span></p>
+                  <p><a class="button button-more" href="#">Подробнее</a> <a class="button button-book" href="#">Забронировать</a></p>
+                </div>
                <img src="img/hotels_photo-3.jpg" alt="Desert Quail Inn" width="135" height="90">
-               <p class="hotel-info"><span class="hotel-type">Апартаменты</span><span class="hotel-price">от 2 000 р.</span></p>
-               <p class="rating">Рейтинг: 9,2</p>
-               <p><a class="button button-more" href="#">Подробнее</a> <a class="button button-book" href="#">Забронировать</a></p>
+               <div class="rating">
+                 <p>Рейтинг: 9,2</p>
+               </div>
              </article>
            </div>
 
