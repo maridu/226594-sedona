@@ -18,6 +18,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 .visually-hidden {
   position: absolute;
 
@@ -38,7 +42,6 @@ a {
   min-width: 768px;
   
   background-color: #ffffff;
-  
   box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2); 
 }
 
@@ -67,16 +70,14 @@ a {
 
 .menu {
   display: flex;
+  flex-flow: row wrap;
   
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
-  padding-left: 6%;
-  padding-right: 6%;
+  padding: 0 6%;
   width: 100%;
   
   list-style: none;
-  
   background-color: #ffffff;
 }
 
@@ -88,11 +89,11 @@ a {
 
 .menu li:nth-child(2) {
   margin-right: auto;
-  padding-left: 2.5%;
+  padding-left: 2.8%;
 }
 
 .menu li:nth-child(3) {
-  padding-right: 3.2%;
+  padding-right: 3.3%;
 }
 
 .menu li:nth-child(1),
@@ -130,7 +131,7 @@ a {
   background-color: #405d6f;
   background-image: url(../img/mask_intro.png), url(../img/bg_intro.jpg);
   background-repeat: no-repeat, no-repeat;
-  background-position: bottom center, center -55px;
+  background-position: bottom center, 50% 20%;
   background-size: 100% 57px, cover;
 }
 
@@ -150,14 +151,12 @@ a {
 
 .advantages-wrapper {
   box-sizing: border-box;
-  padding-top: 45px;
-  padding-bottom: 36px;
-  padding-left: 29.0%;
-  padding-right: 29.5%;
+  padding: 40px 29.5% 36px 29.5%;
+  min-height: 215px;
 }
 
 .advantages h2 {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   
   font-size: 1.5em; /* 21px */
   line-height: 1.24;
@@ -202,9 +201,7 @@ a {
 .advantage-item {
   box-sizing: border-box;
   width: 33.333%;
-  padding-top: 25px;
-  padding-left: 4%;
-  padding-right: 4.2%;  
+  padding: 25px 4.2% 0 4%;
   min-height: 256px;
 }
 
@@ -225,7 +222,7 @@ a {
 
 .row:nth-child(1) h3 {
   width: 50%;
-  margin: 25px auto 20px auto;
+  margin: 20px auto 25px auto;
 }
 
 .more-advantages .advantage-item {
@@ -250,7 +247,7 @@ a {
 
 .more-advantages .advantage-item:nth-child(2)::before {
   background: url(../img/icon-3.svg) no-repeat center center;
-  background-position: 0.7px center;
+  background-position: 2.5px center;
 }
 
 .more-advantages .advantage-item:nth-child(3)::before {
@@ -262,7 +259,7 @@ a {
   
   margin: 0;
   padding: 0;
-  width: 66.666%;
+  width: 66.667%;
   min-height: 256px;
 }
 
@@ -271,7 +268,7 @@ a {
 }
 
 .row:nth-child(3) .advantage-item {
-  padding-left: 3%;
+  padding-left: 3.5%;
   padding-right: 3.5%;
 }
 
@@ -289,9 +286,7 @@ a {
 }
 
 .row:nth-child(4) .advantage-item {
-  padding-top: 45px;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: 45px 5% 0 5%;
 }
 
 .row:nth-child(4) h3 {
@@ -301,7 +296,6 @@ a {
 
 
 /* Блок appointment */
-/*вставка*/
 .appointment {
   position: relative;
   
@@ -437,6 +431,11 @@ a {
   fill: #c9c9c9;
 }
 
+.calendar:hover,
+.appointment-form-button:hover {
+  cursor: pointer;
+}
+
 .calendar:hover path,
 .calendar:focus path {
   fill: #000000;
@@ -462,6 +461,7 @@ a {
 .appointment-form input[name="adults"],
 .appointment-form input[name="children"] {
   display: inline-block;
+  vertical-align: middle;
   box-sizing: border-box;
   margin: 0;
   width: 38px;
@@ -550,12 +550,19 @@ a {
 /* Футер */
 
 .main-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-wrapper {
   position: relative;
+  
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-
+  width: 100%;
   min-height: 120px;
   
   background-color: rgba(255, 255, 255, 0.9);
@@ -587,6 +594,7 @@ a {
 
 .social-list li {
   display: inline-block;
+  vertical-align: middle;
   margin-right: 2px;
 } 
 
@@ -607,6 +615,7 @@ a {
 .social-item {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   
   width: 46px;
   height: 48px;
@@ -662,8 +671,12 @@ a {
   vertical-align: middle;
 }
 
+.copyright-link {
+  margin-bottom: -8px;
+}
+
 .copyright span {
-  margin-right: 8px;
+  margin-right: 5px;
 }
 
 .copyright-link:hover path,
@@ -688,9 +701,7 @@ a.current:active {
 .filter {
   box-sizing: border-box;
   min-height: 218px;
-  padding-left: 5.9%;
-  padding-right: 5.9%;
-  padding-top: 25px;
+  padding: 25px 6% 0 6%;
   
   color: #ffffff;
   line-height: 1.5; /* 21px / 14px */
@@ -720,8 +731,6 @@ a.current:active {
   width: 150px;
   
   border: none;
-  
-  outline: 2px solid green;
 }
 
 .form-filter fieldset:last-of-type {
@@ -737,15 +746,12 @@ a.current:active {
   flex-flow: column wrap;
   
   box-sizing: border-box;
-  width: 30%;
+  width: 31%;
   margin-left: auto;
-  
-  outline: 1px solid green;
 }
 
 .filter-range h3 {
-  margin-top: 2px;
-  margin-bottom: 9px;
+  margin: 2px 0 12px 3.5%;
   
   font-size: 1.14em; /* 16px / 14px */
   line-height: 1.3125; 
@@ -755,13 +761,16 @@ a.current:active {
 .price-controls {
   position: relative;
   
+  box-sizing: border-box;
   height: 36px;
   margin-bottom: 20px;
+  margin-left: 3.5%;
   
   font-size: 0;
   
   border: 2px solid #ffffff;
   border-radius: 2px;
+
 }
 
 .price-controls::after {
@@ -780,6 +789,8 @@ a.current:active {
 .price-controls label {
   display: inline-block;
   vertical-align: top;
+  padding-right: 0;
+  margin-right: 0;
   
   font-size: 14px;
   line-height: 2.14; /* 30px / 14px*/
@@ -789,12 +800,20 @@ a.current:active {
 
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 28%;
-  padding-left: 20.5%;
+  width: 30.5%;
+  padding-top: 1px;
+}
+
+.min-price {
+  padding-left: 20%;
+}
+
+.max-price {
+  padding-left: 16.5%;
 }
 
 .price-controls input {
-  width: 55.5%;
+  width: 35px;
   margin: 0;
   
   color: inherit;
@@ -807,6 +826,7 @@ a.current:active {
 .range-controls {
   position: relative;
   
+  margin-left: 3.5%;
   margin-bottom: 32px;
 }
 
@@ -843,7 +863,6 @@ a.current:active {
   left: 80%;
 }
 
-
 .filter-range .button-show {
   margin: 0 auto;
   padding: 6px 35px;
@@ -872,14 +891,50 @@ a.current:active {
 
 .form-filter ul {
   padding: 0; 
-  padding-left: 38px; /* временно, до верстки кастомных чекбоксов*/
   list-style: none;
 }
 
 .form-filter li {
+  position: relative;
+  
   margin-bottom: 23px;
 }
 
+.infrastructure li {
+  padding-left: 38px;
+}
+
+.housing li {
+  padding-left: 41px;
+}
+
+fieldset label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  display: block;
+  width: 27px;
+  height: 23px;
+  background: url(../img/checkbox-off.svg) no-repeat top left;
+}
+
+fieldset input:checked ~ label::before {
+  background: url(../img/checkbox-on.svg) no-repeat top left;
+}
+
+fieldset input:disabled ~ label::before {
+  background: url(../img/checkbox-off-disabled.svg) no-repeat top left;
+}
+
+fieldset input:disabled:checked ~ label::before {
+  background: url(../img/checkbox-on-disabled.svg) no-repeat top left;
+}
+
+fieldset input:disabled ~ label {
+  color: #696969;
+}
 
 .filter legend,
 .filter label[for="price"] {
@@ -904,9 +959,7 @@ a.current:active {
   align-items: baseline;
   
   box-sizing: border-box;
-  padding-left: 6%;
-  padding-right: 6%;
-  padding-top: 8px;
+  padding: 8px 6% 0 6%;
   min-height: 85px;
 }
 
@@ -989,13 +1042,14 @@ a.current:active {
 .sort-ascending,
 .sort-descending {
   display: inline-block;
+  vertical-align: baseline;
   width: 11px;
   height: 10px;
 }
 
 .sort-ascending {
   background: url(../img/icon-up-dir.svg) no-repeat center center; 
-  margin-right: 12px;
+  margin-right: 10px;
 }
 
 .sort-ascending:hover,
@@ -1037,14 +1091,9 @@ a.current:active {
   display: flex;
   flex-flow: row wrap;
   margin: 0;
-  padding-left: 6%;
-  padding-right: 6.1%;
-  padding-top: 28px;
-  padding-bottom: 28px;
-  
+  padding: 28px 6%;
   box-sizing: border-box;
   min-height: 151px;
-
   
   border-bottom: 1px solid #e5e5e5;
 
@@ -1054,7 +1103,9 @@ a.current:active {
   order: -1;
   
   width: 135px;
+  height: 90px;
   align-self: center;
+  margin-left: -1px;
   margin-right: 30px;
 }
 
@@ -1070,7 +1121,6 @@ a.current:active {
 }
 
 .found-info-wrapper h4 {
-/*  margin-top: 28px;*/
   margin-bottom: 7px;
   margin-top: 0;
 }
@@ -1078,6 +1128,10 @@ a.current:active {
 .hotel-info {
   margin-top: 0;
   margin-bottom: 15px;
+}
+
+.hotel-price {
+  margin-left: 2px;
 }
 
 .found-item a {
@@ -1099,6 +1153,7 @@ a.current:active {
 
 .hotel-info span {
   display: inline-block;
+  vertical-align: baseline;
   width: 110px;
 
 }
@@ -1122,7 +1177,8 @@ a.current:active {
 }
 
 .found-item .button-more {
-  padding: 5px 17px;
+  padding: 3px 17px 5px 17px;
+  margin-right: 2px;
   
   background-color: #81b3d2;
 }
@@ -1137,7 +1193,7 @@ a.current:active {
 }
 
 .found-item .button-book {
-  padding: 5px 16px;
+  padding: 3px 17px 5px 16px;
   
   background-color: #766357;
 }
@@ -1156,40 +1212,36 @@ a.current:active {
   flex-flow: column wrap;
   justify-content: space-between;
   align-items: flex-end;
+  margin-right: -2px;
 }
 
 .rating p {
   margin: 0;
-  padding: 5px 10px 6px 10px;
+  margin-right: 2px;
+  padding: 2px 10px 5px 10px;
   width: 110px;
   box-sizing: border-box;
   
   background-color: #f1f1f1;
 }
 
-.four-stars::before {
+.rating::before {
   content: "";
   display: block;
-  height: 17px;
-  width: 72px;
   
-  background: url(../img/star.svg) repeat-x left center;
+  height: 17px;
+  
+  background: url(../img/star_modified.svg) repeat-x left center;
+}
+
+.four-stars::before {
+  width: 90px;
 }
 
 .three-stars::before {
-  content: "";
-  display: block;
-  height: 17px;
-  width: 54px;
-  
-  background: url(../img/star.svg) repeat-x left center;
+  width: 66px;
 }
 
 .two-stars::before {
-  content: "";
-  display: block;
-  height: 17px;
-  width: 36px;
-  
-  background: url(../img/star.svg) repeat-x left center;
+  width: 42px;
 }
