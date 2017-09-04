@@ -309,7 +309,7 @@ img {
   
   margin-bottom: 25px;
   
-  font-size: 2.143rem; /* 30px */
+  font-size: 2.143rem; /* 30px / 14px */
   line-height: 1.2;
   font-weight: 700;
   color: #000000;
@@ -321,7 +321,7 @@ img {
 
 .appointment .button {
   color: #ffffff;
-  font-size: 1.5em; /* 21px */
+  font-size: 1.5em; /* 21px / 14px */
   line-height: 1.238; /* 26px / 21px */
   font-weight: 700;
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
@@ -467,7 +467,7 @@ img {
   width: 38px;
   height: 38px;
   
-  font-size: 14px;
+  font-size: 1rem; /*14px*/
   text-align: center;
 }
 
@@ -497,7 +497,7 @@ img {
   width: 38px;
   height: 38px;
   
-  font-size: 21px;
+  font-size: 1.5rem; /*21px / 14px*/
   font-weight: 700;
   color: #a9a9a9;
   
@@ -571,7 +571,7 @@ img {
 .hashtag {
   width: 33.333%;
   
-  font-size: 1.5em; /* 21px */
+  font-size: 1.5em; /* 21px / 14px */
   line-height: 1.238; /* 26px / 21px */
   font-weight: 700;
   color: #000000;
@@ -753,7 +753,7 @@ a.current:active {
 .filter-range h3 {
   margin: 2px 0 12px 3.5%;
   
-  font-size: 1.14em; /* 16px / 14px */
+  font-size: 1.143em; /* 16px / 14px */
   line-height: 1.3125; 
   font-weight: 700;
 }
@@ -792,7 +792,7 @@ a.current:active {
   padding-right: 0;
   margin-right: 0;
   
-  font-size: 14px;
+  font-size: 1rem; /*14px*/
   line-height: 2.14; /* 30px / 14px*/
   
   cursor: pointer;
@@ -938,7 +938,7 @@ fieldset input:disabled ~ label {
 
 .filter legend,
 .filter label[for="price"] {
-  font-size: 16px; /*16px / 14px*/
+  font-size: 1.143em; /*16px / 14px*/
   font-weight: 700;
 }
 
@@ -1090,6 +1090,7 @@ fieldset input:disabled ~ label {
 .found-item {
   display: flex;
   flex-flow: row wrap;
+  justify-content: flex-start;
   margin: 0;
   padding: 28px 6%;
   box-sizing: border-box;
@@ -1114,8 +1115,8 @@ fieldset input:disabled ~ label {
 }
 
 .found-info-wrapper {
-  width: auto;
-  flex-grow: 1;
+  width: 350px;
+  margin-right: auto;
   
   text-align: left;
 }
@@ -1234,14 +1235,14 @@ fieldset input:disabled ~ label {
   background: url(../img/star_modified.svg) repeat-x left center;
 }
 
-.four-stars::before {
+.stars-4::before {
   width: 90px;
 }
 
-.three-stars::before {
+.stars-3::before {
   width: 66px;
 }
 
-.two-stars::before {
+.stars-2::before {
   width: 42px;
 }
