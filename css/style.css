@@ -1,3 +1,38 @@
+@keyframes show {
+  0% {
+    transform: scaleY(0) translateY(-100%);
+  }
+  1% {
+    transform: scaleY(1) translateY(-50%);
+  }
+  
+  100% {
+    transform: scaleY(1) translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 /*Общие стили*/
 html, 
 body {
@@ -363,7 +398,7 @@ img {
   min-height: 86px;
 }
 
-.appointment-form {
+.appointment-form-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -375,13 +410,38 @@ img {
   
   box-sizing: border-box;
   margin-left: -284px;
+  width: 568px;
+  min-height: 395px;
+  overflow: hidden;
+}
+
+.appointment-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  
+  box-sizing: border-box;
   padding: 55px;
   width: 568px;
   min-height: 395px;
   
   background-color: #ffffff;
-  
   box-shadow: 0px 7px 15px 0px rgba(0, 1, 1, 0.15);
+  animation: show 0.6s;
+}
+
+.form-hidden {
+  display: none;
+}
+
+.form-error {
+  animation: shake 0.6s;
 }
 
 .appointment-form input {
@@ -538,12 +598,30 @@ img {
 /* Карта */
 .map {
   height: 475px; /*в содержимом нет текста*/
+  position: relative;
+  
 }
 
 .map-wrapper {
+  position: relative;
+  
   width: 100%;
   height: 593px; /*в содержимом нет текста*/
   overflow: hidden;
+}
+
+.map img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.map iframe {
+  position: relative;
+  z-index: 2;
+  
+  width: 100%;
+  height: 593px;
 }
 
 
@@ -557,6 +635,7 @@ img {
 
 .footer-wrapper {
   position: relative;
+  z-index: 3;
   
   display: flex;
   flex-flow: row wrap;
@@ -770,7 +849,6 @@ a.current:active {
   
   border: 2px solid #ffffff;
   border-radius: 2px;
-
 }
 
 .price-controls::after {
@@ -908,7 +986,7 @@ a.current:active {
   padding-left: 41px;
 }
 
-fieldset label::before {
+.fieldset label::before {
   content: "";
   position: absolute;
   top: 0;
@@ -920,20 +998,24 @@ fieldset label::before {
   background: url(../img/checkbox-off.svg) no-repeat top left;
 }
 
-fieldset input:checked ~ label::before {
+.fieldset input:checked ~ label::before {
   background: url(../img/checkbox-on.svg) no-repeat top left;
 }
 
-fieldset input:disabled ~ label::before {
+.fieldset input:disabled ~ label::before {
   background: url(../img/checkbox-off-disabled.svg) no-repeat top left;
 }
 
-fieldset input:disabled:checked ~ label::before {
+.fieldset input:disabled:checked ~ label::before {
   background: url(../img/checkbox-on-disabled.svg) no-repeat top left;
 }
 
-fieldset input:disabled ~ label {
+.fieldset input:disabled ~ label {
   color: #696969;
+}
+
+.fieldset label:hover {
+  cursor: pointer;
 }
 
 .filter legend,
@@ -1097,7 +1179,6 @@ fieldset input:disabled ~ label {
   min-height: 151px;
   
   border-bottom: 1px solid #e5e5e5;
-
 }
 
 .found-img-wrapper {
