@@ -1100,14 +1100,17 @@ fieldset input:disabled ~ label {
 
 }
 
-.found-item img {
+.found-img-wrapper {
   order: -1;
   
   width: 135px;
-  height: 90px;
   align-self: center;
   margin-left: -1px;
   margin-right: 30px;
+}
+
+.found-item img {
+ max-width: 100%;
 }
 
 .found-item:first-child {
