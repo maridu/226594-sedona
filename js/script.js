@@ -5,6 +5,8 @@ var dateOut = document.querySelector('[name=date-out]');
 var adultsAmount = document.querySelector('[name=adults]');
 var childrenAmount = document.querySelector('[name=children]');
 
+//var adultStorage = localStorage.getItem('adults');
+
 var adultsLessButton = document.querySelector('.adults-less');
 var adultsMoreButton = document.querySelector('.adults-more');
 var childrenLessButton = document.querySelector('.children-less');
@@ -24,6 +26,10 @@ if (formToggleButton) {
     form.classList.toggle('form-hidden');
     if (!form.classList.contains('form-hidden')) {
       dateIn.focus();
+      var adultStorage = localStorage.getItem('adults');
+      adultsAmount.value = adultStorage;
+      var childrenStorage = localStorage.getItem('children');
+      childrenAmount.value = childrenStorage;
      }
   });
 }
@@ -69,6 +75,8 @@ if (formSearchButton) {
         form.classList.remove('form-error');
         form.submit();
       }
+      localStorage.setItem('adults', adultsAmount.value);
+      localStorage.setItem('children', childrenAmount.value);
     }
   });
 }
