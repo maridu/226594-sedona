@@ -5,7 +5,6 @@ var dateOut = document.querySelector('[name=date-out]');
 var adultsAmount = document.querySelector('[name=adults]');
 var childrenAmount = document.querySelector('[name=children]');
 
-//var adultStorage = localStorage.getItem('adults');
 
 var adultsLessButton = document.querySelector('.adults-less');
 var adultsMoreButton = document.querySelector('.adults-more');
@@ -13,8 +12,7 @@ var childrenLessButton = document.querySelector('.children-less');
 var childrenMoreButton = document.querySelector('.children-more');
 
 var formSearchButton = document.querySelector('.button-search');
-var filterButton = document.querySelector('.button-show');
-var filterForm = document.querySelector('.form-filter');
+
 
 if (form) {
   form.classList.add('form-hidden'); // скрываем форму поиска при загрузке страницы
@@ -80,15 +78,5 @@ if (formSearchButton) {
     }
   });
 }
-
-// страница hotels.html
-if (filterButton) {
-  filterButton.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    filterForm.submit();
-  });
-}
-
-
 
 

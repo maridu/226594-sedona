@@ -90,7 +90,7 @@ body {
   line-height: 1.5;
   color: #333333;
   font-weight: 400;
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   text-align: center;
   background-color: #ededed;
@@ -216,7 +216,7 @@ img {
 /* Блок intro */
 .intro {
   width: 100%;
-  min-height: 510px;
+  min-height: 509px;
   
   background-color: #405d6f;
   background-image: url(../img/mask_intro.png), url(../img/bg_intro.jpg);
@@ -249,12 +249,13 @@ img {
 .advantages-wrapper {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 40px 29.5% 36px 29.5%;
-  min-height: 215px;
+  padding: 40px 29.3% 36px 29.3%;
+  min-height: 216px;
 }
 
 .advantages h2 {
-  margin-bottom: 30px;
+  margin-bottom: 29px;
+  margin-top: 18px;
   
   font-size: 1.5em; /* 21px */
   line-height: 1.24;
@@ -307,11 +308,11 @@ img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 33.333%;
-  padding: 25px 4.2% 0 4%;
+  padding: 26px 4.05% 0 4%;
   min-height: 256px;
 }
 
-.advantage-item h3 {  
+.advantage-item h3 {    
   font-size: 1.5em; /* 21px */
   line-height: 1;
   color: #000000;
@@ -319,7 +320,7 @@ img {
 }
 
 .advantage-number {
-  margin-bottom: 23px;
+  margin-bottom: 21px; /*23*/
 }
 
 .description {
@@ -331,6 +332,7 @@ img {
   margin: 20px auto 25px auto;
 }
 
+
 .more-advantages .advantage-item {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -339,11 +341,15 @@ img {
  
 }
 
+.more-advantages h3 {
+  margin-bottom: 22px;
+}
+
 .more-advantages .advantage-item::before {
   content: "";
   display: block;
   
-  margin: 0 auto 32px auto;
+  margin: 0 auto 30px auto;
   width: 90px;
   height: 76px;
 }
@@ -402,6 +408,7 @@ img {
 
 .row:nth-child(4) h3 {
   width: 50%;
+  min-width: 116px;
   margin: 0 auto 25px auto;
 }
 
@@ -415,12 +422,12 @@ img {
           box-sizing: border-box;
   min-height: 290px;
   padding-top: 50px;
+  padding-bottom: 95px;
 }
 
 .appointment b {
   display: block;
-  
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   
   font-size: 2.143rem; /* 30px / 14px */
   line-height: 1.2;
@@ -429,6 +436,7 @@ img {
 }
 
 .appointment-info {
+  margin-bottom: 12px;
   line-height: 1.714; /* 24px / 14px */
 }
 
@@ -437,7 +445,7 @@ img {
   font-size: 1.5em; /* 21px / 14px */
   line-height: 1.238; /* 26px / 21px */
   font-weight: 700;
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   
   background-color: #766357;
@@ -557,9 +565,9 @@ img {
           box-sizing: border-box;
   padding: 5px 10px;
   
-  line-height: 1.857; /* 26px / 14px */
+  line-height: 1;
   font-weight: 700;
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   color: #000000;
   text-transform: uppercase;
   
@@ -718,7 +726,7 @@ img {
 
 /* Карта */
 .map {
-  height: 475px; /*в содержимом нет текста*/
+  height: 473px; /*в содержимом нет текста 475*/
   position: relative;
   
 }
@@ -795,6 +803,7 @@ img {
 
 .social {
   width: 33.333%;
+  margin-top: 1px;
 }
 
 .social-list {
@@ -1064,6 +1073,7 @@ a.current:active {
   
   color: inherit;
   font: inherit;
+  line-height: 1;
   
   background: 0;
   border: 0;
@@ -1119,7 +1129,7 @@ a.current:active {
   font-size: 1em;
   line-height: 1.5;
   font-weight: 400;
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   color: #ffffff;
   
@@ -1162,8 +1172,8 @@ a.current:active {
   left: 0;
   
   display: block;
-  width: 27px;
-  height: 23px;
+  width: 30px; 
+  height: 30px; 
   background: url(../img/checkbox-off.svg) no-repeat top left;
 }
 
@@ -1310,26 +1320,33 @@ a.current:active {
 }
 
 .sort-buttons {
-  margin-left: auto;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  
+  margin: 0 -2px 5px auto;
 }
 
 .sort-ascending,
 .sort-descending {
-  display: inline-block;
-  vertical-align: baseline;
-  width: 11px;
+  width: 15px; 
   height: 10px;
+  padding: 1px 6px 1px 6px;
+  
+  line-height: 1;
+  border: 0;
 }
 
 .sort-ascending {
   background: url(../img/icon-up-dir.svg) no-repeat center center; 
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 .sort-ascending:hover,
 .sort-ascending:focus {
   background: url(../img/icon-up-dir-hover.svg) no-repeat center center;
   outline: none;
+  cursor: pointer;
 }
 
 .sort-ascending:active {
@@ -1344,6 +1361,7 @@ a.current:active {
 .sort-descending:focus {
   background: url(../img/icon-down-dir-hover.svg) no-repeat center center;
   outline: none;
+  cursor: pointer;
 }
 
 .sort-descending:active,
@@ -1378,7 +1396,7 @@ a.current:active {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin: 0;
-  padding: 28px 6%;
+  padding: 28px 6% 24px 6%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   min-height: 151px;
@@ -1394,8 +1412,7 @@ a.current:active {
   width: 135px;
   -ms-flex-item-align: center;
       align-self: center;
-  margin-left: -1px;
-  margin-right: 30px;
+  margin: 2px 30px -2px -1px;
 }
 
 .found-item img {
@@ -1415,16 +1432,20 @@ a.current:active {
 
 .found-info-wrapper h4 {
   margin-bottom: 7px;
-  margin-top: 0;
+  margin-top: -2px;
 }
 
 .hotel-info {
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 }
 
 .hotel-price {
   margin-left: 2px;
+}
+
+.found-item h4 {
+  letter-spacing: 0.3px;
 }
 
 .found-item a {
@@ -1486,7 +1507,7 @@ a.current:active {
 }
 
 .found-item .button-book {
-  padding: 3px 17px 5px 16px;
+  padding: 3px 17px 5px 17px;
   
   background-color: #766357;
 }
@@ -1518,8 +1539,7 @@ a.current:active {
 }
 
 .rating p {
-  margin: 0;
-  margin-right: 2px;
+  margin: 0 2px 3px 0;
   padding: 2px 10px 5px 10px;
   width: 110px;
   -webkit-box-sizing: border-box;
@@ -1531,8 +1551,7 @@ a.current:active {
 .rating::before {
   content: "";
   display: block;
-  
-  height: 17px;
+  height: 20px;
   
   background: url(../img/star_modified.svg) repeat-x left center;
 }
